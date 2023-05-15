@@ -17,13 +17,13 @@ const DomElement = function (selector, height, width, bg, fontSize) {
       const p = document.createElement("p");
       p.id = `${selector}`;
       p.innerHTML = "Любой текст p";
-      p.style.cssText = `height: ${this.height}px; width: ${this.height}px; bg: ${this.bg}px; fontSize: ${this.fontSize}px;`;
+      p.style.cssText = `height: ${this.height}px; width: ${this.height}px; background: ${this.bg}; font-size: ${this.fontSize}px;`;
       document.body.append(p);
     }
   };
 };
 
 const BlockDomElement = new DomElement(".block");
-const ParagraphDomElement = new DomElement("#best");
+const ParagraphDomElement = new DomElement("#best", 100, 400, "red", 18);
 BlockDomElement.createElement();
 ParagraphDomElement.createElement();
